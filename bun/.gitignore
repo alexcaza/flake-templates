@@ -1,0 +1,16 @@
+## NIX ##
+.direnv
+result
+
+## NODE ##
+node_modules
+npm-debug.log
+typings
+coverage/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+## OS ##
+Thumbs.db
+.DS_Store
