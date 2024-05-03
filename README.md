@@ -6,25 +6,33 @@ A collection of flake templates to be used for new projects.
 
 Uses typescript, pnpm and nodejs.
 
-`nix flake init -t github:alexcaza/flake-templates#node-ts`
+```bash
+nix flake init -t github:alexcaza/flake-templates#node-ts
+```
 
 ## Bun
 
 Barebones broject that uses bun and playwright.
 
-`nix flake init -t github:alexcaza/flake-templates#bun`
+```
+nix flake init -t github:alexcaza/flake-templates#bun
+```
 
 ## Rust
 
 Basic rust project using [oxalica/rust-overlay](https://github.com/oxalica/rust-overlay) that uses `toolchain.toml` to set channel and components.
 
-`nix flake init -t github:alexcaza/flake-templates#rust`
+```
+nix flake init -t github:alexcaza/flake-templates#rust
+```
 
 ## Go
 
 Basic Go 1.22 project.
 
-`nix flake init -t github:alexcaza/flake-templates#go`
+```
+nix flake init -t github:alexcaza/flake-templates#go
+```
 
 # Inpiration
 
