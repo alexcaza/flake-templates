@@ -15,6 +15,9 @@
       go = {
         path = ./go;
       };
+      go-bun-monorepo = {
+        path = ./go-bun-monorepo;
+      };
     };
   };
 }
