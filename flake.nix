@@ -18,6 +18,9 @@
       go-bun-monorepo = {
         path = ./go-bun-monorepo;
       };
+      zig = {
+        path = ./zig;
+      };
     };
   };
 }
