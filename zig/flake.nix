@@ -1,11 +1,9 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    zig = {
-      url = "github:mitchellh/zig-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     flake-utils.url = "github:numtide/flake-utils";
+    zig.url = "github:mitchellh/zig-overlay";
+    zls.url = "github:zigtools/zls";
   };
 
   outputs = {
@@ -13,17 +11,22 @@
     nixpkgs,
     flake-utils,
     zig,
+    zls
   }:
     flake-utils.lib.eachDefaultSystem
     (
       system: let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [zig.overlays.default];
         };
       in
         with pkgs; {
-          devShells.default = mkShell {};
+          devShells.default = mkShell {
+            buildInputs = [
+              zig.packages.${system}.master
+              zls.packages.${system}.zls
+            ];
+          };
         }
     );
 }
